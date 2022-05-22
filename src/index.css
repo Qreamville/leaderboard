@@ -8,3 +8,69 @@ body {
   padding: 0;
   font-family: "Roboto", sans-serif;
 }
+
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.input__box {
+  background-color: #e8e8e8;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 20rem;
+}
+
+.input__box form {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.6em;
+}
+
+.input__box form input {
+  width: 100%;
+  border: none;
+  padding: 0.5rem;
+}
+
+button {
+  margin-top: 1.1rem;
+  border: none;
+  background-color: #3cb03c;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table td,
+.table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.table tbody {
+  text-align: center;
+}
+.table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #04aa6d;
+  color: #fff;
+}
