@@ -1,5 +1,5 @@
 import { createContext, useState } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import Board from "./components/Board";
 import Input from "./components/Input";
 
@@ -15,7 +15,7 @@ function App() {
   const [participantData, setParticipantData] = useState([]);
   return (
     <myContext.Provider value={{ participantData, setParticipantData }}>
-      <BrowserRouter>
+      <HashRouter>
         <div className="App">
           <Routes>
             <Route
@@ -31,7 +31,7 @@ function App() {
             <Route path="/board" element={<Board />} />
           </Routes>
         </div>
-      </BrowserRouter>
+      </HashRouter>
     </myContext.Provider>
   );
 }
