@@ -1,17 +1,28 @@
-import React from "react";
-import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
+import { useState } from "react";
+import { AiOutlinePlus } from "react-icons/ai";
 
-const SingleBoard = ({ id, name, iteration, steps }) => {
+const SingleBoard = ({ id, name, iterations, steps }) => {
+  const [iteration, setIteration] = useState(iterations);
+  const [step, setStep] = useState(steps);
+
+  const onIncreaseIteration = () => {
+    const random = Math.floor(Math.random() * 50);
+
+    setIteration(iteration + 1);
+    setStep((prev) => {
+      return prev + 500 - random;
+    });
+  };
   return (
     <>
       <td>{id}</td>
       <td>{name}</td>
       <td>
         <div className="increase_iteration">
-          <AiOutlineMinus /> {iteration} <AiOutlinePlus />
+          {iteration} <AiOutlinePlus onClick={onIncreaseIteration} />
         </div>
       </td>
-      <td>{steps}</td>
+      <td>{step}</td>
     </>
   );
 };

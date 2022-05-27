@@ -9,6 +9,14 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+.input__main {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .input__box {
   background-color: #e8e8e8;
   padding: 2rem;
@@ -31,7 +39,7 @@ body {
   padding: 0.5rem;
 }
 
-button {
+.input__box button {
   margin-top: 1.1rem;
   border: none;
   background-color: #3cb03c;

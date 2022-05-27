@@ -1,12 +1,16 @@
-// import React, { useEffect, useState } from "react";
+import React, { useContext } from "react";
+import { myContext } from "../App";
 import SingleBoard from "./SingleBoard";
 
-const Board = ({ participantData }) => {
+const Board = () => {
+  const { participantData, setParticipantData } = useContext(myContext);
+
   const leaderBoard = participantData.map((item, _index) => {
     const { id, name, iteration, steps } = item.participant;
+
     return (
       <tr key={_index}>
-        <SingleBoard id={id} name={name} iteration={iteration} steps={steps} />
+        <SingleBoard id={id} name={name} iterations={iteration} steps={steps} />
       </tr>
     );
   });
