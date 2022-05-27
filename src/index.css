@@ -9,14 +9,6 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-.App {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  height: 100vh;
-}
-
 .input__box {
   background-color: #e8e8e8;
   padding: 2rem;
@@ -49,6 +41,15 @@ button {
   cursor: pointer;
 }
 
+.board {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 2rem;
+}
+
 .table {
   border-collapse: collapse;
   width: 100%;
@@ -73,4 +74,18 @@ button {
   text-align: center;
   background-color: #04aa6d;
   color: #fff;
+}
+
+.increase_iteration {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0.5rem;
+  height: 100%;
+}
+
+.increase_iteration svg {
+  cursor: pointer;
+  font-size: 1.1rem;
 }

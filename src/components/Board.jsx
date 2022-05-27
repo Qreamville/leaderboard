@@ -1,29 +1,30 @@
 // import React, { useEffect, useState } from "react";
+import SingleBoard from "./SingleBoard";
 
 const Board = ({ participantData }) => {
   const leaderBoard = participantData.map((item, _index) => {
     const { id, name, iteration, steps } = item.participant;
     return (
       <tr key={_index}>
-        <td>{id}</td>
-        <td>{name}</td>
-        <td>{iteration}</td>
-        <td>{steps}</td>
+        <SingleBoard id={id} name={name} iteration={iteration} steps={steps} />
       </tr>
     );
   });
   return (
-    <table className="table">
-      <thead>
-        <tr>
-          <th>id</th>
-          <th>Name</th>
-          <th>Iterations</th>
-          <th>Steps</th>
-        </tr>
-      </thead>
-      <tbody>{leaderBoard}</tbody>
-    </table>
+    <main className="board">
+      <h1>LeaderBoard</h1>
+      <table className="table">
+        <thead>
+          <tr>
+            <th>id</th>
+            <th>Name</th>
+            <th>Iterations</th>
+            <th>Steps</th>
+          </tr>
+        </thead>
+        <tbody>{leaderBoard}</tbody>
+      </table>
+    </main>
   );
 };
 
