@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+// import React, { useEffect, useState } from "react";
 
 const Board = ({ participantData }) => {
   const leaderBoard = participantData.map((item, _index) => {
